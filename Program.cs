@@ -6,7 +6,7 @@
 23432 -> да
 *********************************************************************************************************************/
 // Решение 1:
-
+/*
 Console.Write("Введите пятизначное число: ");
 int num = int.Parse(Console.ReadLine()!);
 
@@ -29,5 +29,21 @@ else
         Console.WriteLine($"Число {num} - не палиндромом");
     }
 }
+*/
+// Решение 2:
 
-
+Console.Write("Введите пятизначное число: ");
+string num = Console.ReadLine()!;
+if (num.Length == 5){
+if (num[0] == num[4] && num[1] == num[3])
+    {
+        Console.WriteLine($"Число {num} - палиндромом");
+    }
+    else
+    {
+        Console.WriteLine($"Число {num} - не палиндромом");
+    }    
+}
+else{
+    Console.WriteLine("Ваше число не шестизначное");
+}
